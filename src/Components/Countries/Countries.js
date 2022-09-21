@@ -18,8 +18,8 @@ const Countries = () => {
     },[])
 
 
-
-    return ( countries.map(country=><Country country={country} key ={country.cca3}></Country>));
+    // Sorted Country List
+    return (countries.sort((country1,country2)=> country2.population-country1.population).map(country=><Country country={country} key ={country.cca3}></Country>));
 };
 
 export default Countries;
