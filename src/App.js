@@ -6,8 +6,7 @@ import Country from './Componenets/Country/Country';
 function App() {
   return (
     <div className="App">
-      <h1>Country Details</h1>
-      <Countries></Countries>
+      <h1 className='text-2xl font-semibold'>Country Details</h1>
       <Country></Country>
     </div>
   );
