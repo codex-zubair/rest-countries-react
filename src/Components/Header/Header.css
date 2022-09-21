@@ -8,12 +8,12 @@ nav
 nav>a
 {
     font-size: 2rem;
-    color: rgb(100, 100, 218);
+    color: rgb(5, 5, 246);
   
 }
 
 nav>a:hover
 {
-    color: rgb(13, 0, 255);
+    font-weight: bold;
     font-size: 2.01rem;
 }
