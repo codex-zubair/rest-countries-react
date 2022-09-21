@@ -1,16 +1,18 @@
 import React from 'react';
 import './Country.css';
 
-const Country = () => {
+const Country = (props) => {
+    // Props Destructuring.
+    const { capital, flags, name, population } = props.country;
     return (
-        <section className='grid grid-cols-3 gap-2 w-11/12 mx-auto mt-2'>
-            <div className='bg-red-50 rounded-md'>
-            <img src="d" alt="Flag"/>
-            <h2 className='text-xl font-semibold'>Country Name</h2>
-            <h4 className='font-semibold'>Population: <span className='font-light'>Population</span></h4>
-            <h4 className='font-semibold'>Capital: <span>Name</span></h4>
+
+        <div className='bg-red-50 rounded-md'>
+            <img src={flags.png} alt={name.common + "Flag"} />
+            <h2 className='text-xl font-semibold'>{name.common}</h2>
+            <h4 className='font-semibold'>Population: <span className='font-light'>{population}</span></h4>
+            <h4 className='font-semibold'>Capital: <span>{capital}</span></h4>
         </div>
-        </section>
+
     );
 };
 
