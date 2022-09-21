@@ -6,7 +6,7 @@ const Country = (props) => {
     const { capital, flags, name, population } = props.country;
     return (
 
-        <div className='bg-red-50 rounded-md'>
+        <div className='bg-red-50 rounded-md flex flex-col'>
             <img src={flags.png} alt={name.common + "Flag"} />
             <h2 className='text-xl font-semibold'>{name.common}</h2>
             <h4 className='font-semibold'>Population: <span className='font-light'>{population}</span></h4>
