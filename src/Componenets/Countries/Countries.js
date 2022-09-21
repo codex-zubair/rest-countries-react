@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Country from '../Country/Country';
 
 const Countries = () => {
-    return (
-        <div>
-            Hello Country!
-        </div>
-    );
+
+    // Making store to use the value 
+    // by help of use state.
+    const [countries,setCountries] = useState([])
+
+
+
+
+
+
+    // Now Calling The API By Help of use Effect each Render Time...
+    useEffect(()=>{
+        fetch('https://restcountries.com/v3.1/all').then(response=> response.json()).then(country=> setCountries(country)).catch(error=>console.log(error))
+    },[])
+
+
+
+    return ( countries.map(country=><Country country={country} key ={country.cca3}></Country>));
 };
 
 export default Countries;

@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <h1 className='text-2xl font-semibold'>Country Details</h1>
-      <Country></Country>
+      <Countries></Countries>
     </div>
   );
 }
